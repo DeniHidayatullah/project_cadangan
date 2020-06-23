@@ -1,0 +1,34 @@
+.form-required::after{
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+
+.login-container img.apps {
+    max-height: 100px;
+    max-width: 275px;
+}
+
+img.logo_finance {
+    max-height: 100px;
+    max-width: 275px;
+}
+
+
+.img-full {
+    width: 100%
+}
+
+.img-full img {
+    width: 100%
+}
+
+.blog-recent div {}
+.thumb, .thumb-wrapper img {
+    width: 60px;
+    height: 60px;
+}
+
+.text-middle{
+    vertical-align: middle !important;
+}
