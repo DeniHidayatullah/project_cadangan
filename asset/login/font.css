@@ -1,0 +1,94 @@
+/*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,100,300,500,700,900);*/
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/source_sans_pro/SourceSansPro-ExtraLight.ttf);
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url(../fonts/source_sans_pro/SourceSansPro-ExtraLightItalic.ttf);
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Light.ttf);
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url(../fonts/source_sans_pro/SourceSansPro-LightItalic.ttf);
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Regular.ttf);
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Regular.ttf);
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Italic.ttf);
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Bold.ttf);
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Bold.ttf);
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/source_sans_pro/SourceSansPro-BoldItalic.ttf);
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Black.ttf);
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/source_sans_pro/SourceSansPro-Black.ttf);
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 900;
+  src: url(../fonts/source_sans_pro/SourceSansPro-BlackItalic.ttf);
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
