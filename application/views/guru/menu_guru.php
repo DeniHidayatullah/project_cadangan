@@ -37,7 +37,7 @@
       </li>
 
       <li>
-        <a href="<?php echo base_url(); ?>calendar">
+        <a href="<?php echo base_url(); ?>guru/quiz/quiz">
           <i class="fa fa-users"></i> <span>Quiz/UjianOnline</span>
         </a>
       </li>
