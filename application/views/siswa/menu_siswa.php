@@ -39,7 +39,7 @@ if (!empty($data_siswa->foto)) {
       </li>
 
       <li>
-        <a href="<?php echo base_url(); ?>diganti ya">
+        <a href="<?php echo base_url(); ?>siswa/presensi/presensi">
           <i class="fa fa-th-large"></i> <span>Presensi Siswa</span>
         </a>
       </li>

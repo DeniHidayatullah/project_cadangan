@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>guru/capaian/tampil" method="post">
+                                <form role="form" action="<?php echo base_url(); ?>siswa/presensi/tampil" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -24,7 +24,7 @@
                                             </select>
                                         </div>
                                         <div class="col-xs-2">
-                                            <button class="btn btn-primary" name="tampil"><i class="fa fa-search"> </i> Tampilkan Data</button>
+                                            <button class="btn btn-primary" name="tampil"><i class="fa fa-search"> </i> Lihat </button>
                                         </div>
                                     </div>
                                 </form>
@@ -37,30 +37,36 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>NISN</th>
-                                    <th>Nama Siswa</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Action</th>
+                                    <th>Mata Pelajaran</th>
+                                    <th>Pertemuan</th>
+                                    <th>Hadir</th>
+                                    <th>Sakit</th>
+                                    <th>Izin</th>
+                                    <th>Alpa</th>
+                                    <th>Kehadiran</th>
                                 </tr>
+
                             </thead>
                             <tbody>
                                 <?php
 
-                                if (!empty($capaian)) {
+                                if (!empty($presensi)) {
                                     $no = 1;
-                                    foreach ($capaian->result_array() as $data) { ?>
+                                    foreach ($presensi->result_array() as $data) { ?>
                                         <tr>
                                             <td><?php echo $no; ?></td>
-                                            <td><?php echo $data['nisn']; ?></td>
-                                            <td><?php echo $data['nama_siswa']; ?></td>
-                                            <td><?php echo $data['jenis_kelamin']; ?></td>
-
+                                            <td><?php echo $data['kode_mapel']; ?></td>
+                                            <td><?php echo $data['kkm']; ?></td>
+                                            <td><?php echo $data['angka_pengetahuan']; ?></td>
+                                            <td><?php echo $data['deskripsi_pengetahuan']; ?></td>
+                                            <td><?php echo $data['angka_keterampilan']; ?></td>
+                                            <td><?php echo $data['deskripsi_keterampilan']; ?></td>
 
                                         </tr>
                                     <?php $no++;
                                     } ?>
                                 <?php } else {
-                                    echo '<tr><td colspan="9">Silahkan Pilih Tahun Akademimk Terlebih Dahulu</td></tr>';
+                                    echo '<tr><td colspan="9">Silahkan Pilih Tahun Akdemik Terlebih Dahulu</td></tr>';
                                 } ?>
                             </tbody>
                         </table>

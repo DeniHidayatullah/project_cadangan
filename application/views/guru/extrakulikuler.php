@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>guru/capaian/tampil" method="post">
+                                <form role="form" action="<?php echo base_url(); ?>guru/extrakulikuler/tampil" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -39,22 +39,28 @@
                                     <th>No</th>
                                     <th>NISN</th>
                                     <th>Nama Siswa</th>
-                                    <th>Jenis Kelamin</th>
+                                    <th>Kegiatan Extrakulikuler</th>
+                                    <th>Nilai</th>
+                                    <th>Deskripsi</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
 
-                                if (!empty($capaian)) {
+                                if (!empty($extrakulikuler)) {
                                     $no = 1;
-                                    foreach ($capaian->result_array() as $data) { ?>
+                                    foreach ($extrakulikuler->result_array() as $data) { ?>
                                         <tr>
                                             <td><?php echo $no; ?></td>
                                             <td><?php echo $data['nisn']; ?></td>
                                             <td><?php echo $data['nama_siswa']; ?></td>
-                                            <td><?php echo $data['jenis_kelamin']; ?></td>
-
+                                            <td><?php echo $data['kegiatan']; ?></td>
+                                            <td><?php echo $data['nilai']; ?></td>
+                                            <td><?php echo $data['deskripsi']; ?></td>
+                                            <td>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Simpan</a>
+                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Batal</a>
 
                                         </tr>
                                     <?php $no++;
