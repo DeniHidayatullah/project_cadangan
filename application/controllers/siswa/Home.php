@@ -52,6 +52,7 @@ class Home extends CI_Controller
         $d['pekerjaan_wali'] = $data->pekerjaan_wali;
         $d['pendidikan_wali'] = $data->pendidikan_wali;
         $d['no_hp_wali'] = $data->no_hp_wali;
+        
         $this->load->view('siswa/top', $d);
         $this->load->view('siswa/menu_siswa');
         $this->load->view('siswa/home');

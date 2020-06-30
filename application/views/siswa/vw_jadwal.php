@@ -1,11 +1,14 @@
 <div class="content-wrapper">
-    <section class="content-header">
-        <h1>
-            <?php echo $judul; ?>
-        </h1>
-
+<section class="content-header">
+      <h1>
+        <?php echo $judul; ?>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-user"></i> Master </a></li>
+        <li class="active"><?php echo $judul; ?></li>
+      </ol>
     </section>
-    <section class="content">
+	<section class="content">
         <!-- Main row -->
 
         <!-- Main row -->
@@ -15,7 +18,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>siswa/jadwal/tampil" method="post">
+                                <form role="form" action="<?php echo base_url('siswa/jadwal/tampil/' . $kode_kelas ); ?>" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -37,15 +40,12 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Kode Pelajaran</th>
                                     <th>Mata Pelajaran</th>
-                                    <th>Kelas</th>
                                     <th>Guru</th>
                                     <th>Hari</th>
                                     <th>Mulai</th>
                                     <th>Selesai</th>
                                     <th>Ruang</th>
-                                    <th>Semester</th>
                                 </tr>
 
                             </thead>
@@ -57,15 +57,12 @@
                                     foreach ($jadwal->result_array() as $data) { ?>
                                         <tr>
                                             <td><?php echo $no; ?></td>
-                                            <td><?php echo $data['kode_mapel']; ?></td>
                                             <td><?php echo $data['nama_mapel']; ?></td>
-                                            <td><?php echo $data['kode_kelas']; ?></td>
                                             <td><?php echo $data['nama_guru']; ?></td>
                                             <td><?php echo $data['hari']; ?></td>
                                             <td><?php echo $data['jam_mulai']; ?></td>
                                             <td><?php echo $data['jam_selesai']; ?></td>
-                                            <td><?php echo $data['kode_ruangan']; ?></td>
-                                            <td><?php echo $data['id_tahun_ajaran']; ?></td>
+                                            <td><?php echo $data['nama_ruangan']; ?></td>
 
                                         </tr>
                                     <?php $no++;

@@ -33,13 +33,13 @@ if (!empty($data_siswa->foto)) {
       </li>
 
       <li>
-        <a href="<?php echo base_url(); ?>siswa/jadwal/jadwal">
+        <a href="<?php echo base_url('siswa/jadwal/detail_jadwal/'); ?>"
           <i class="fa fa-tag"></i> <span>Jadwal Pelajaran</span>
         </a>
       </li>
 
       <li>
-        <a href="<?php echo base_url(); ?>siswa/presensi/presensi">
+        <a href="<?php echo base_url('siswa/presensi/'); ?>"
           <i class="fa fa-th-large"></i> <span>Presensi Siswa</span>
         </a>
       </li>

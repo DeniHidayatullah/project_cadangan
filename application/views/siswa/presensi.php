@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>siswa/presensi/tampil" method="post">
+                                <form role="form" action="<?php echo base_url('siswa/presensi/tampil/'. $nisn.'/'.$kode_kelas ); ?>" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
