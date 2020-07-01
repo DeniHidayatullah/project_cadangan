@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url('siswa/presensi/tampil/'. $nisn.'/'.$kode_kelas ); ?>" method="post">
+                                <form role="form" action="<?php echo base_url(); ?>siswa/raport/tampil" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -35,24 +35,26 @@
                     <div class="box-body">
                         <table id="datatb" class="table table-bordered table-hover">
                             <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Mata Pelajaran</th>
-                                    <th>Pertemuan</th>
-                                    <th>Hadir</th>
-                                    <th>Sakit</th>
-                                    <th>Izin</th>
-                                    <th>Alpa</th>
-                                    <th>Kehadiran</th>
-                                </tr>
-
+                            <tr>
+            <th style='border:1px solid #ffffff; background-color:lightblue' width='40px' rowspan='2'>No</th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' width='300px' rowspan='2'><center>Mata Pelajaran</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' rowspan='2'><center>KKM</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' colspan='2' style='text-align:center'><center>Pengetahuan</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' colspan='2' style='text-align:center'><center>Keterampilan</center></th>
+          </tr>
+          <tr>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Nilai</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Predikat</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Nilai</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Predikat</center></th>
+          </tr>
                             </thead>
                             <tbody>
                                 <?php
 
-                                if (!empty($presensi)) {
+                                if (!empty($raport)) {
                                     $no = 1;
-                                    foreach ($presensi->result_array() as $data) { ?>
+                                    foreach ($raport->result_array() as $data) { ?>
                                         <tr>
                                             <td><?php echo $no; ?></td>
                                             <td><?php echo $data['kode_mapel']; ?></td>

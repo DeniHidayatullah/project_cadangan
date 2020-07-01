@@ -33,22 +33,22 @@ if (!empty($data_siswa->foto)) {
       </li>
 
       <li>
-        <a href="<?php echo base_url('siswa/jadwal/detail_jadwal/'); ?>"
+        <a href="<?php echo base_url(); ?>siswa/jadwal/detail_jadwal"
           <i class="fa fa-tag"></i> <span>Jadwal Pelajaran</span>
         </a>
       </li>
 
       <li>
-        <a href="<?php echo base_url('siswa/presensi/'); ?>"
+        <a href="<?php echo base_url(); ?>siswa/presensi/detail_presensi"
           <i class="fa fa-th-large"></i> <span>Presensi Siswa</span>
         </a>
       </li>
 
-      <li>
+      <!-- <li>
         <a href="<?php echo base_url(); ?>siswa/quiz/tampilan">
           <i class="fa fa-dashboard"></i> <span>Quiz/Ujian Online</span>
         </a>
-      </li>
+      </li> -->
 
       <li class="<?php if ($this->uri->segment(1) == 'nilai') echo 'active'; ?> treeview <?php if ($this->uri->segment(1) == 'nilai') echo 'menu-open'; ?>">
         <a href="#">
@@ -58,8 +58,8 @@ if (!empty($data_siswa->foto)) {
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo base_url(); ?>siswa/uts/uts"><i class="fa fa-angle-double-right"></i> Cetak Raport UTS</a></li>
-          <li><a href="<?php echo base_url(); ?>siswa/raport/raport"><i class="fa fa-angle-double-right"></i> Cetak Raport</a></li>
+          <li><a href="<?php echo base_url(); ?>siswa/uts/nilai_uts"><i class="fa fa-angle-double-right"></i> Data Raport UTS</a></li>
+          <li><a href="<?php echo base_url(); ?>siswa/raport/nilai_raport"><i class="fa fa-angle-double-right"></i> Data Raport</a></li>
         </ul>
       </li>
 

@@ -35,27 +35,19 @@
                     <div class="box-body">
                         <table id="datatb" class="table table-bordered table-hover">
                             <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Mata Pelajaran</th>
-                                    <th>KKM</th>
-                                    <th>Pengetahuan</th>
-                                    <th>Keterampilan</th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <center>Nilai</center>
-                                    </th>
-                                    <th>
-                                        <center>Deskripsi</center>
-                                    </th>
-                                    <th>
-                                        <center>Nilai</center>
-                                    </th>
-                                    <th>
-                                        <center>Deskripsi</center>
-                                    </th>
-                                </tr>
+                            <tr>
+            <th style='border:1px solid #ffffff; background-color:lightblue' width='40px' rowspan='2'>No</th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' width='300px' rowspan='2'><center>Mata Pelajaran</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' rowspan='2'><center>KKM</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' colspan='2' style='text-align:center'><center>Pengetahuan</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue' colspan='2' style='text-align:center'><center>Keterampilan</center></th>
+          </tr>
+          <tr>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Nilai</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Predikat</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Nilai</center></th>
+            <th style='border:1px solid #ffffff; background-color:lightblue'><center>Predikat</center></th>
+          </tr>
                             </thead>
                             <tbody>
                                 <?php
@@ -65,7 +57,7 @@
                                     foreach ($nilai_uts->result_array() as $data) { ?>
                                         <tr>
                                             <td><?php echo $no; ?></td>
-                                            <td><?php echo $data['kode_mapel']; ?></td>
+                                            <td><?php echo $data['nama_mapel']; ?></td>
                                             <td><?php echo $data['kkm']; ?></td>
                                             <td><?php echo $data['angka_pengetahuan']; ?></td>
                                             <td><?php echo $data['deskripsi_pengetahuan']; ?></td>

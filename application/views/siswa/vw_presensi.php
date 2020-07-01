@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>siswa/raport/tampil" method="post">
+                                <form role="form" action="<?php echo base_url('siswa/presensi/tampil/'. $nisn); ?>" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -38,34 +38,23 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Mata Pelajaran</th>
-                                    <th>KKM</th>
-                                    <th>Pengetahuan</th>
-                                    <th>Keterampilan</th>
+                                    <th>Pertemuan</th>
+                                    <th>Hadir</th>
+                                    <th>Sakit</th>
+                                    <th>Izin</th>
+                                    <th>Alpa</th>
+                                    <th>Kehadiran</th>
                                 </tr>
-                                <tr>
-                                    <th>
-                                        <center>Nilai</center>
-                                    </th>
-                                    <th>
-                                        <center>Deskripsi</center>
-                                    </th>
-                                    <th>
-                                        <center>Nilai</center>
-                                    </th>
-                                    <th>
-                                        <center>Deskripsi</center>
-                                    </th>
-                                </tr>
+
                             </thead>
                             <tbody>
                                 <?php
-
-                                if (!empty($raport)) {
+                                if (!empty($presensi)) {
                                     $no = 1;
-                                    foreach ($raport->result_array() as $data) { ?>
+                                    foreach ($presensi->result_array() as $data) { ?>
                                         <tr>
                                             <td><?php echo $no; ?></td>
-                                            <td><?php echo $data['kode_mapel']; ?></td>
+                                            <td><?php echo $data['nama_mapel']; ?></td>
                                             <td><?php echo $data['kkm']; ?></td>
                                             <td><?php echo $data['angka_pengetahuan']; ?></td>
                                             <td><?php echo $data['deskripsi_pengetahuan']; ?></td>
