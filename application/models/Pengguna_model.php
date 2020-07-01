@@ -75,4 +75,12 @@ class Pengguna_model extends CI_Model
 		$this->db->where('nis', $nis);
 		$this->db->delete('pgn_siswa');
 	}
+
+	public function gurukelas()
+	{
+		$q = $this->db->query("SELECT a.*, c.nisn, c.nama_siswa, f.kegiatan, f.nilai, f.deskripsi FROM mst_kelas a JOIN pgn_guru b ON a.kode_guru=b.kode_guru JOIN pgn_siswa c ON c.kode_kelas=a.kode_kelas JOIN akd_jadwal_pelajaran d ON d.kode_kelas=a.kode_kelas 
+		JOIN mst_tahun_ajaran e ON e.id_tahun_ajaran=d.id_tahun_ajaran JOIN nilai_extrakulikuler f ON 
+		f.id_tahun_ajaran=d.id_tahun_ajaran");
+		return $q;
+	}
 }

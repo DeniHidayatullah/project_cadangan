@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class data_nilai extends CI_Controller
+class Input_uts extends CI_Controller
 {
 
 
@@ -11,6 +11,7 @@ class data_nilai extends CI_Controller
         $this->load->Model('Akd_model');
         $this->load->Model('Combo_model');
         $this->load->Model('Pengguna_model');
+        $this->load->Model('Nilai_model');
     }
 
 
@@ -20,10 +21,10 @@ class data_nilai extends CI_Controller
     }
 
 
-    public function data_nilai($id_tahun_ajaran = "")
+    public function input_uts($id_tahun_ajaran = "")
     {
-        $d['judul'] = "Data Nilai UTS";
-        $d['data_nilai'] = $this->Akd_model->akd_jadwal($id_tahun_ajaran);
+        $d['judul'] = "Input Nilai UTS";
+        $d['input_uts'] = $this->Akd_model->akd_jadwal($id_tahun_ajaran);
         $d['id_tahun_ajaran'] = $id_tahun_ajaran;
         $d['pgn_guru'] = $this->db->get_where('pgn_guru', ['nip' =>
         $this->session->userdata('nip')])->row_array();
@@ -34,7 +35,7 @@ class data_nilai extends CI_Controller
         $d['combo_tahun_ajaran'] = $this->Combo_model->combo_tahun_ajaran($id_tahun_ajaran);
         $this->load->view('guru/top_guru', $d);
         $this->load->view('guru/menu_guru');
-        $this->load->view('guru/data_nilai');
+        $this->load->view('guru/input_uts');
         $this->load->view('guru/bottom_guru');
     }
 
@@ -48,6 +49,15 @@ class data_nilai extends CI_Controller
         $data = $get->row();
         $d['kode_kelas'] = $data->kode_kelas;
         $id_tahun_ajaran = $this->input->post("id_tahun_ajaran");
-        redirect("guru/data_nilai/data_nilai/" . $id_tahun_ajaran . "/" . $data->kode_kelas);
+        redirect("guru/input_uts/input_uts/" . $id_tahun_ajaran . "/" . $data->kode_kelas);
+    }
+    public function input()
+    {
+        $d['judul'] = "Input UTS";
+        $d['hasil_rekap'] = $this->Nilai_model->input_uts();
+        $this->load->view('guru/top_guru', $d);
+        $this->load->view('guru/menu_guru');
+        $this->load->view('guru/input_uts1');
+        $this->load->view('guru/bottom_guru');
     }
 }

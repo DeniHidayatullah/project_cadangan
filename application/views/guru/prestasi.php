@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>guru/prestasi/tampil" method="post">
+                                <form role="form" action="<?php echo base_url('guru/prestasi/tampil/' . $kode_kelas); ?>" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -54,12 +54,14 @@
                                             <td><?php echo $no; ?></td>
                                             <td><?php echo $data['nisn']; ?></td>
                                             <td><?php echo $data['nama_siswa']; ?></td>
-                                            <td><?php echo $data['jenis_kegiatan']; ?></td>
-                                            <td><?php echo $data['keterangan']; ?></td>
+                                            <td><textarea name='b" . $no . "' class='form-control' style='width:100%; color:blue' placeholder='Tuliskan Deskripsi...'><?php echo $data['jenis_kegiatan'] ?></textarea></td>
+                                            <td><textarea name='b" . $no . "' class='form-control' style='width:100%; color:blue' placeholder='Tuliskan Deskripsi...'><?php echo $data['keterangan'] ?></textarea></td>
+                                            <!-- <td><?php echo $data['jenis_kegiatan']; ?></td>
+                                            <td><?php echo $data['keterangan']; ?></td> -->
 
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Simpan</a>
-                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Batal</a>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#'; ?>"> Simpan</a>
+                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/prestasi/prestasi'); ?>"> Batal</a>
 
                                         </tr>
                                     <?php $no++;

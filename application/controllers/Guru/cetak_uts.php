@@ -10,6 +10,7 @@ class Cetak_uts extends CI_Controller
         parent::__construct();
         $this->load->Model('Nilai_model');
         $this->load->Model('Combo_model');
+        $this->load->Model('Pengguna_model');
     }
 
 
@@ -22,15 +23,13 @@ class Cetak_uts extends CI_Controller
     public function cetak_uts($id_tahun_ajaran = "")
     {
         $d['judul'] = "Cetak Laporan UTS Siswa";
-        if (!empty($kode_kelas)) {
-            $d['nilai_uts'] = $this->Nilai_model->cetak_uts($id_tahun_ajaran);
-
-            $d['id_tahun_ajaran'] = $id_tahun_ajaran;
-        } else {
-            $d['nilai_uts'] = "";
-            $d['id_tahun_ajaran'] = "";
-        }
-
+        $d['nilai_uts'] = $this->Nilai_model->cetak_utswakel($id_tahun_ajaran);
+        $d['id_tahun_ajaran'] = $id_tahun_ajaran;
+        $d['pgn_guru'] = $this->db->get_where('pgn_guru', ['nip' =>
+        $this->session->userdata('nip')])->row_array();
+        $get = $this->Pengguna_model->gurukelas();
+        $data = $get->row();
+        $d['kode_kelas'] = $data->kode_kelas;
         $d['combo_tahun_ajaran'] = $this->Combo_model->combo_tahun_ajaran($id_tahun_ajaran);
         $this->load->view('guru/top_guru', $d);
         $this->load->view('guru/menu_guru');
@@ -42,7 +41,12 @@ class Cetak_uts extends CI_Controller
 
     public function tampil()
     {
+        $d['pgn_guru'] = $this->db->get_where('pgn_guru', ['nip' =>
+        $this->session->userdata('nip')])->row_array();
+        $get = $this->Pengguna_model->gurukelas();
+        $data = $get->row();
+        $d['kode_kelas'] = $data->kode_kelas;
         $id_tahun_ajaran = $this->input->post("id_tahun_ajaran");
-        redirect("guru/cetak_uts/cetak_uts/" . $id_tahun_ajaran);
+        redirect("guru/cetak_uts/cetak_uts/" . $id_tahun_ajaran . "/" . $data->kode_kelas);
     }
 }

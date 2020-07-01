@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>guru/extrakulikuler/tampil" method="post">
+                                <form role="form" action="<?php echo base_url('guru/extrakulikuler/tampil/' . $kode_kelas); ?>" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -55,12 +55,17 @@
                                             <td><?php echo $no; ?></td>
                                             <td><?php echo $data['nisn']; ?></td>
                                             <td><?php echo $data['nama_siswa']; ?></td>
-                                            <td><?php echo $data['kegiatan']; ?></td>
-                                            <td><?php echo $data['nilai']; ?></td>
-                                            <td><?php echo $data['deskripsi']; ?></td>
+                                            <td><textarea name='b" . $no . "' class='form-control' style='width:100%; color:blue' placeholder='Tuliskan Deskripsi...'><?php echo $data['kegiatan'] ?></textarea></td>
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Simpan</a>
-                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Batal</a>
+                                                <input type='text' name='a" . $no . "' value='<?php echo $data['nilai'] ?>' style='width:70px; text-align:center; padding:0px; color:blue'></>
+                                            </td>
+                                            <td><textarea name='b" . $no . "' class='form-control' style='width:100%; color:blue' placeholder='Tuliskan Deskripsi...'><?php echo $data['deskripsi'] ?></textarea></td>
+                                            <!-- <td><?php echo $data['kegiatan']; ?></td>
+                                            <td><?php echo $data['nilai']; ?></td>
+                                            <td><?php echo $data['deskripsi']; ?></td> -->
+                                            <td>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/extrakulikuler/save'); ?>"> Simpan</a>
+                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/extrakulikuler/extrakulikuler'); ?>"> Batal</a>
 
                                         </tr>
                                     <?php $no++;

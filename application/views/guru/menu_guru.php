@@ -31,16 +31,12 @@
         </a>
       </li>
       <li>
-        <a href="<?php echo base_url(); ?>guru/jadwal/jadwal">
+        <a href="<?php echo base_url('guru/jadwal/jadwal/'); ?>">
           <i class="fa fa-th-large"></i> <span>Jadwal Pelajaran</span>
         </a>
       </li>
 
-      <li>
-        <a href="<?php echo base_url(); ?>guru/quiz/quiz">
-          <i class="fa fa-users"></i> <span>Quiz/UjianOnline</span>
-        </a>
-      </li>
+
       <li class="<?php if ($this->uri->segment(1) == 'nilai') echo 'active'; ?> treeview <?php if ($this->uri->segment(1) == 'nilai') echo 'menu-open'; ?>">
         <a href="#">
           <i class="fa fa-list-alt"></i> <span>Input Nilai Siswa</span>
@@ -49,8 +45,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo base_url(); ?>admin/nilai/cetak_uts"><i class="fa fa-angle-double-right"></i> Input Nilai UTS</a></li>
-          <li><a href="<?php echo base_url(); ?>nilai/nilai_raport"><i class="fa fa-angle-double-right"></i> Input Nilai Raport</a></li>
+          <li><a href="<?php echo base_url('guru/input_uts/input_uts/'); ?>"><i class="fa fa-angle-double-right"></i> Input Nilai UTS</a></li>
+          <li><a href="<?php echo base_url('guru/input_raport/input_raport/'); ?>"><i class="fa fa-angle-double-right"></i> Input Nilai Raport</a></li>
         </ul>
       </li>
       <li class="<?php if ($this->uri->segment(1) == 'nilai') echo 'active'; ?> treeview <?php if ($this->uri->segment(1) == 'nilai') echo 'menu-open'; ?>">
@@ -61,14 +57,14 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="<?php echo base_url(); ?>guru/data_nilai/data_nilai"><i class="fa fa-angle-double-right"></i> Data Nilai UTS</a></li>
-          <li><a href="<?php echo base_url(); ?>guru/cetak_uts/cetak_uts"><i class="fa fa-angle-double-right"></i> Cetak Raport UTS</a></li>
-          <li><a href="<?php echo base_url(); ?>guru/capaian/capaian"><i class="fa fa-angle-double-right"></i> Data Capaian Belajar</a></li>
-          <li><a href="<?php echo base_url(); ?>guru/extrakulikuler/extrakulikuler"><i class="fa fa-angle-double-right"></i> Data Extrakulikuler</a></li>
-          <li><a href="<?php echo base_url(); ?>guru/prestasi/prestasi"><i class="fa fa-angle-double-right"></i> Data Prestasi</a></li>
-          <li><a href="<?php echo base_url(); ?>guru/catatan/catatan"><i class="fa fa-angle-double-right"></i> Data Catatan Wakel</a></li>
-          <li><a href="<?php echo base_url(); ?>guru/data_nilai_raport/data_nilai_raport"><i class="fa fa-angle-double-right"></i> Data Nilai Raport</a></li>
-          <li><a href="<?php echo base_url(); ?>guru/cetak_raport/cetak_raport"><i class="fa fa-angle-double-right"></i> Cetak Raport</a></li>
+          <li><a href="<?php echo base_url('guru/data_nilai/data_nilai/'); ?>"><i class="fa fa-angle-double-right"></i> Data Nilai UTS</a></li>
+          <li><a href="<?php echo base_url('guru/cetak_uts/cetak_uts/'); ?>"><i class="fa fa-angle-double-right"></i> Cetak Raport UTS</a></li>
+          <li><a href="<?php echo base_url('guru/capaian/capaian'); ?>"><i class="fa fa-angle-double-right"></i> Data Capaian Belajar</a></li>
+          <li><a href="<?php echo base_url('guru/extrakulikuler/extrakulikuler/'); ?>"><i class="fa fa-angle-double-right"></i> Data Extrakulikuler</a></li>
+          <li><a href="<?php echo base_url('guru/prestasi/prestasi/'); ?>"><i class="fa fa-angle-double-right"></i> Data Prestasi</a></li>
+          <li><a href="<?php echo base_url('guru/catatan/catatan/'); ?>"><i class="fa fa-angle-double-right"></i> Data Catatan Wakel</a></li>
+          <li><a href="<?php echo base_url('guru/data_nilai_raport/data_nilai_raport/'); ?>"><i class="fa fa-angle-double-right"></i> Data Nilai Raport</a></li>
+          <li><a href="<?php echo base_url('guru/cetak_raport/cetak_raport/'); ?>"><i class="fa fa-angle-double-right"></i> Cetak Raport</a></li>
         </ul>
       </li>
       <li>

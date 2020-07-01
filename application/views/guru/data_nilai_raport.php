@@ -15,7 +15,7 @@
                     <div class="box-header">
                         <div class="row">
                             <div class="col-xs-6">
-                                <form role="form" action="<?php echo base_url(); ?>guru/data_nilai_raport/tampil" method="post">
+                                <form role="form" action="<?php echo base_url('guru/data_nilai_raport/tampil/' . $kode_kelas); ?>" method="post">
                                     <div class="row">
 
                                         <div class="col-xs-6">
@@ -36,14 +36,10 @@
                         <table id="datatb" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>Jadwal Pelajaran</th>
-                                    <th>Kelas</th>
+                                    <th>No</th>
+                                    <th>Nama Pelajaran</th>
                                     <th>Guru</th>
-                                    <th>Hari</th>
-                                    <th>Mulai</th>
-                                    <th>Selesai</th>
-                                    <th>Ruangan</th>
-                                    <th>Semester</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,20 +50,14 @@
                                     foreach ($data_nilai_raport->result_array() as $data) { ?>
                                         <tr>
                                             <td><?php echo $no; ?></td>
-                                            <td><?php echo $data['jadwal_pelajaran']; ?></td>
-                                            <td><?php echo $data['kelas']; ?></td>
-                                            <td><?php echo $data['guru']; ?></td>
-                                            <td><?php echo $data['hari']; ?></td>
-                                            <td><?php echo $data['mulai']; ?></td>
-                                            <td><?php echo $data['selesai']; ?></td>
-                                            <td><?php echo $data['ruang']; ?></td>
-                                            <td><?php echo $data['Penilaian']; ?></td>
+                                            <td><?php echo $data['nama_mapel']; ?></td>
+                                            <td><?php echo $data['nama_guru']; ?></td>
 
-                                            
+
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Sikap </a>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Pengetahuan </a>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#' . $data['id']; ?>"> Keterampilan </a>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url(); ?>"> Sikap </a>
+                                                <a class="btn btn-success btn-xs" href="<?php echo base_url(); ?>"> Pengetahuan </a>
+                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url(); ?>"> Keterampilan </a>
 
                                         </tr>
                                     <?php $no++;
