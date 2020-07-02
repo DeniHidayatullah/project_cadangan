@@ -56,7 +56,7 @@ class Nilai_model extends CI_Model
 	}
 	public function input_uts()
 	{
-		$q = $this->db->query("SELECT * FROM nilai_uts ORDER BY kode_siswa DESC");
+		$q = $this->db->query("SELECT a.*, b.nisn,b.nama_siswa, c.kode_kelas , c.nama_kelas , f.nama_mapel FROM nilai_uts a JOIN pgn_siswa b ON a.kode_siswa=b.kode_siswa join mst_kelas c on b.kode_kelas=c.kode_kelas join akd_jadwal_pelajaran d on c.kode_kelas=d.kode_kelas join akd_mapel f on d.kode_mapel=f.kode_mapel ");
 		return $q;
 	}
 	public function input_sikap()
