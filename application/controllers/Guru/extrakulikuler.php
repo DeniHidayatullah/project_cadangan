@@ -75,10 +75,10 @@ class Extrakulikuler extends CI_Controller
 
                 $this->db->update("nilai_extrakulikuler", $in, $where);
                 $this->session->set_flashdata("success", "Ubah Data Admin Berhasil");
-                redirect("admin/extrakulikuler/extrakulikuler");
+                redirect("guru/extrakulikuler/extrakulikuler");
             }
         } else {
-            redirect(base_url());
+            redirect("guru/extrakulikuler/extrakulikuler");
         }
     }
 }

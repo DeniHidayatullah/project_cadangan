@@ -53,8 +53,8 @@ class Input_uts extends CI_Controller
     }
     public function input()
     {
-        $d['judul'] = "Input UTS";
-        $d['hasil_rekap'] = $this->Nilai_model->input_uts();
+        $d['judul'] = "Input Nilai UTS";
+        $d['input'] = $this->Nilai_model->input_uts();
         $this->load->view('guru/top_guru', $d);
         $this->load->view('guru/menu_guru');
         $this->load->view('guru/input_uts1');

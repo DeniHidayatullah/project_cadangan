@@ -11,6 +11,7 @@ class Input_raport extends CI_Controller
         $this->load->Model('Akd_model');
         $this->load->Model('Combo_model');
         $this->load->Model('Pengguna_model');
+        $this->load->Model('Nilai_model');
     }
 
 
@@ -50,5 +51,32 @@ class Input_raport extends CI_Controller
 
         $id_tahun_ajaran = $this->input->post("id_tahun_ajaran");
         redirect("guru/input_raport/input_raport/" . $id_tahun_ajaran . "/" . $data->kode_kelas);
+    }
+    public function input_sikap()
+    {
+        $d['judul'] = "Input Sikap";
+        $d['input'] = $this->Nilai_model->input_sikap();
+        $this->load->view('guru/top_guru', $d);
+        $this->load->view('guru/menu_guru');
+        $this->load->view('guru/input_sikap');
+        $this->load->view('guru/bottom_guru');
+    }
+    public function input_keterampilan()
+    {
+        $d['judul'] = "Input Keterampilan";
+        $d['input'] = $this->Nilai_model->input_keterampilan();
+        $this->load->view('guru/top_guru', $d);
+        $this->load->view('guru/menu_guru');
+        $this->load->view('guru/input_keterampilan');
+        $this->load->view('guru/bottom_guru');
+    }
+    public function input_pengetahuan()
+    {
+        $d['judul'] = "Input Pengetahuan";
+        $d['input'] = $this->Nilai_model->input_pengetahuan();
+        $this->load->view('guru/top_guru', $d);
+        $this->load->view('guru/menu_guru');
+        $this->load->view('guru/input_pengetahuan');
+        $this->load->view('guru/bottom_guru');
     }
 }

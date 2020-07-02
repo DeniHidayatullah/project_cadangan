@@ -60,7 +60,7 @@
                                             <td><?php echo $data['keterangan']; ?></td> -->
 
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#'; ?>"> Simpan</a>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/prestasi/prestasi'); ?>"> Simpan</a>
                                                 <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/prestasi/prestasi'); ?>"> Batal</a>
 
                                         </tr>

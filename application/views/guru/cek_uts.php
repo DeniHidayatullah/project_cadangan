@@ -91,8 +91,8 @@
                                                 </td>
                                                 <td><textarea name='d" . $no . "' class='form-control' style='width:100%; color:blue' placeholder='Tuliskan Deskripsi...'><?php echo $data['deskripsi_keterampilan'] ?></textarea></td>
                                                 <td>
-                                                    <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/input_uts/input_uts'); ?>"> Simpan</a>
-                                                    <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/input_uts/input_uts'); ?>"> Batal</a>
+                                                    <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/data_nilai/data_nilai/'); ?>"> Simpan</a>
+                                                    <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/data_nilai/data_nilai/'); ?>"> Batal</a>
 
 
                                             </tr>
@@ -104,7 +104,7 @@
                                 </tbody>
                             </table>
 
-                            <a href="<?php echo base_url(); ?>guru/input_uts/input_uts"><button type='button' class='btn btn-danger pull-right'>Kembali</button></a>
+                            <a href="<?php echo base_url(); ?>guru/data_nilai/data_nilai"><button type='button' class='btn btn-danger pull-right'>Kembali</button></a>
                         </div>
                     </div>";
                     <!-- /.box-body -->

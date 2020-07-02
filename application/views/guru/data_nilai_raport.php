@@ -55,9 +55,9 @@
 
 
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url(); ?>"> Sikap </a>
-                                                <a class="btn btn-success btn-xs" href="<?php echo base_url(); ?>"> Pengetahuan </a>
-                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url(); ?>"> Keterampilan </a>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/data_nilai_raport/input_sikap/'); ?>"> Sikap </a>
+                                                <a class="btn btn-success btn-xs" href="<?php echo base_url('guru/data_nilai_raport/input_pengetahuan/'); ?>"> Pengetahuan </a>
+                                                <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/data_nilai_raport/input_keterampilan/'); ?>"> Keterampilan </a>
 
                                         </tr>
                                     <?php $no++;

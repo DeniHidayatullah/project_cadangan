@@ -57,7 +57,7 @@
                                             <!-- <td><?php echo $data['catatan']; ?></td> -->
 
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#'; ?>"> Simpan</a>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/catatan/catatan'); ?>"> Simpan</a>
                                                 <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/catatan/catatan'); ?>"> Batal</a>
 
                                         </tr>

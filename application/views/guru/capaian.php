@@ -82,7 +82,7 @@
                                             </td>
                                             <td><textarea name='d" . $no . "' class='form-control' style='width:100%; color:blue' placeholder='Tuliskan Deskripsi...'><?php echo $data['sosial_deskripsi'] ?></textarea></td>
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/'); ?>"> Simpan</a>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/capaian/capaian'); ?>"> Simpan</a>
                                                 <a class="btn btn-danger btn-xs" href="<?php echo base_url('guru/capaian/capaian'); ?>"> Batal</a>
 
 

@@ -53,7 +53,7 @@
                                             <td><?php echo $data['nama_mapel']; ?></td>
                                             <td><?php echo $data['nama_guru']; ?></td>
                                             <td>
-                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url() . '#'; ?>"> Input Nilai</a>
+                                                <a class="btn btn-primary btn-xs" href="<?php echo base_url('guru/data_nilai/input/'); ?>"> Input Nilai</a>
 
                                         </tr>
                                     <?php $no++;

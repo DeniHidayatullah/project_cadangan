@@ -24,8 +24,6 @@ class Nilai_model extends CI_Model
 		$q = $this->db->query("SELECT * FROM pgn_siswa join mst_kelas on pgn_siswa.kode_kelas = mst_kelas.kode_kelas JOIN akd_jadwal_pelajaran ON akd_jadwal_pelajaran.kode_kelas=mst_kelas.kode_kelas  join  nilai_uts on nilai_uts.kode_jadwal_pelajaran=akd_jadwal_pelajaran.kode_jadwal_pelajaran join akd_mapel on akd_jadwal_pelajaran.kode_mapel=akd_mapel.kode_mapel  where akd_jadwal_pelajaran.id_tahun_ajaran = '$id_tahun_ajaran'ORDER BY pgn_siswa.nama_siswa ASC");
 		return $q;
 	}
-
-
 	public function capaian($id_tahun_ajaran)
 	{
 		$kode_kelas = $this->uri->segment(5);
@@ -59,6 +57,21 @@ class Nilai_model extends CI_Model
 	public function input_uts()
 	{
 		$q = $this->db->query("SELECT * FROM nilai_uts ORDER BY kode_siswa DESC");
+		return $q;
+	}
+	public function input_sikap()
+	{
+		$q = $this->db->query("SELECT a.*, b.nisn,b.nama_siswa, c.kode_kelas , c.nama_kelas , f.nama_mapel FROM nilai_sikap a JOIN pgn_siswa b ON a.kode_siswa=b.kode_siswa join mst_kelas c on b.kode_kelas=c.kode_kelas join akd_jadwal_pelajaran d on c.kode_kelas=d.kode_kelas join akd_mapel f on d.kode_mapel=f.kode_mapel ");
+		return $q;
+	}
+	public function input_pengetahuan()
+	{
+		$q = $this->db->query("SELECT a.*, b.nisn,b.nama_siswa, c.kode_kelas , c.nama_kelas , f.nama_mapel FROM nilai_pengetahuan a JOIN pgn_siswa b ON a.kode_siswa=b.kode_siswa join mst_kelas c on b.kode_kelas=c.kode_kelas join akd_jadwal_pelajaran d on c.kode_kelas=d.kode_kelas join akd_mapel f on d.kode_mapel=f.kode_mapel ");
+		return $q;
+	}
+	public function input_keterampilan()
+	{
+		$q = $this->db->query("SELECT a.*, b.nisn,b.nama_siswa, c.kode_kelas , c.nama_kelas , f.nama_mapel FROM nilai_keterampilan a JOIN pgn_siswa b ON a.kode_siswa=b.kode_siswa join mst_kelas c on b.kode_kelas=c.kode_kelas join akd_jadwal_pelajaran d on c.kode_kelas=d.kode_kelas join akd_mapel f on d.kode_mapel=f.kode_mapel ");
 		return $q;
 	}
 }
